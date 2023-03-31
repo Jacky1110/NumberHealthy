@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="0dp">
+
+
+    <com.jotangi.NumberHealthy.utils.MaskView
+        android:id="@+id/layout_mask"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/layout_mask">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_xpos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_xpos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_camera"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/normal_button_horizontal_margin"
+            android:layout_marginEnd="@dimen/normal_button_horizontal_margin"
+            android:background="@drawable/background_edittext1"
+            app:layout_constraintDimensionRatio="@dimen/normal_button_dimension_ratio_2_1"
+            app:layout_constraintEnd_toEndOf="@id/gl_xpos1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:textColor="@color/c_b21b25_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                android:background="@null"
+                android:text="@string/camera"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_gallery"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/normal_button_horizontal_margin"
+            android:layout_marginEnd="@dimen/normal_button_horizontal_margin"
+            android:background="@drawable/background_edittext1"
+            app:layout_constraintDimensionRatio="@dimen/normal_button_dimension_ratio_2_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_xpos2"
+            app:layout_constraintStart_toStartOf="@id/gl_xpos1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:textColor="@color/c_b21b25_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                android:gravity="center"
+                android:background="@null"
+                android:text="@string/gallery"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_cut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/normal_button_horizontal_margin"
+            android:layout_marginEnd="@dimen/normal_button_horizontal_margin"
+            android:background="@drawable/background_edittext1"
+            app:layout_constraintDimensionRatio="@dimen/normal_button_dimension_ratio_2_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gl_xpos2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:textColor="@color/c_b21b25_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                android:gravity="center"
+                android:background="@null"
+                android:text="@string/cut"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

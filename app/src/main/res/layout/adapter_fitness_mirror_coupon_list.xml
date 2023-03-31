@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/coupon_imageview"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coupon_title_textview"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="76dp"
+            android:paddingStart="5dp"
+            android:text="QQ咩噗奶茶專賣店"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coupon_content_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:maxLines="2"
+            android:paddingStart="5dp"
+            android:text="ggggggggggg"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/coupon_point_textview"
+            app:layout_constraintEnd_toStartOf="@+id/coupon_button_use"
+            app:layout_constraintStart_toEndOf="@id/coupon_imageview"
+            app:layout_constraintTop_toBottomOf="@id/coupon_title_textview" />
+
+        <TextView
+            android:id="@+id/coupon_point_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:text="所需點數:5000點"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/coupon_star_date_textview"
+            app:layout_constraintEnd_toStartOf="@+id/coupon_button_use"
+            app:layout_constraintStart_toStartOf="@+id/coupon_content_textview" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="使用期限"
+            android:textColor="@color/colorAccent"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="130dp"/>
+
+        <TextView
+            android:id="@+id/coupon_star_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="2020-06-01 16:00:00"
+            android:textColor="@color/colorAccent"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="～"
+            android:textColor="@color/colorAccent"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/coupon_star_date_textview" />
+
+        <TextView
+            android:id="@+id/coupon_end_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="2020-06-01 16:00:00"
+            android:textColor="@color/colorAccent"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text2" />
+
+        <Button
+            android:id="@+id/coupon_button_use"
+            android:layout_width="35dp"
+            android:layout_height="0dp"
+            android:background="@color/red"
+            android:text="兌\n換"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

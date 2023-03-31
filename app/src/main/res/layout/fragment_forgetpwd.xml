@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Member.ForgetpwdFragment">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView75"
+                style="@style/tvCommonList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="請重新設定您的密碼"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView76"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="手機號碼"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+            <EditText
+                android:id="@+id/fgPhone"
+                style="@style/tvCommonList"
+
+
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="請輸入您的手機號碼"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView76"
+                app:layout_constraintTop_toBottomOf="@+id/textView76" />
+
+            <TextView
+                android:id="@+id/textView77"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="驗證碼"
+                app:layout_constraintStart_toStartOf="@+id/textView76"
+                app:layout_constraintTop_toBottomOf="@+id/fgPhone" />
+
+            <EditText
+                android:id="@+id/fgOtp"
+                style="@style/tvCommonList"
+
+
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="請輸入驗證碼"
+                app:layout_constraintEnd_toEndOf="@+id/fgPhone"
+                app:layout_constraintStart_toStartOf="@+id/textView76"
+                app:layout_constraintTop_toBottomOf="@+id/textView77" />
+
+            <TextView
+                android:id="@+id/textView78"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="新密碼"
+                app:layout_constraintStart_toStartOf="@+id/fgOtp"
+                app:layout_constraintTop_toBottomOf="@+id/fgOtp" />
+
+            <EditText
+                android:id="@+id/fgNewPwd"
+                style="@style/tvCommonList"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/member_pw_hinet"
+                app:layout_constraintEnd_toEndOf="@+id/fgOtp"
+                app:layout_constraintStart_toStartOf="@+id/textView76"
+                app:layout_constraintTop_toBottomOf="@+id/textView78" />
+
+            <TextView
+                android:id="@+id/textView79"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="再次輸入新密碼"
+                app:layout_constraintStart_toStartOf="@+id/fgNewPwd"
+                app:layout_constraintTop_toBottomOf="@+id/fgNewPwd" />
+
+            <EditText
+                android:id="@+id/fgAgain"
+                style="@style/tvCommonList"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="請輸入新密碼"
+                app:layout_constraintEnd_toEndOf="@+id/fgNewPwd"
+                app:layout_constraintStart_toStartOf="@+id/textView76"
+                app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
+            <Button
+                android:id="@+id/fgGet"
+                style="@style/toolBarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="獲取驗證碼"
+                app:layout_constraintBottom_toBottomOf="@+id/fgOtp"
+                app:layout_constraintEnd_toEndOf="@+id/fgOtp"
+                app:layout_constraintTop_toTopOf="@+id/fgOtp" />
+
+            <Button
+                android:id="@+id/fgSend"
+                style="@style/tvMemberTabIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext1"
+                android:text="送出"
+                app:layout_constraintEnd_toEndOf="@+id/fgAgain"
+                app:layout_constraintStart_toStartOf="@+id/fgAgain"
+                app:layout_constraintTop_toBottomOf="@+id/fgAgain" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

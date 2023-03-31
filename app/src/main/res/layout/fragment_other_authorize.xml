@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <TextView
+        android:id="@+id/tv_et_title"
+        style="@style/authorizeTitle"
+        android:text="輸入帳號"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/et_account_entry"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:inputType="number"
+        android:maxLength="10"
+        android:hint="請輸入數體健帳號(手機)"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_et_title" />
+
+    <Button
+        android:id="@+id/bt_authorize_invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_edittext1"
+        android:text="授權申請"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintTop_toBottomOf="@+id/et_account_entry" />
+
+    <View
+        android:id="@+id/v_line"
+        style="@style/vMemberLine0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_authorize_invite" />
+
+    <TextView
+        android:id="@+id/tv_cared_title"
+        style="@style/authorizeTitle"
+        android:text="我關注的"
+        app:layout_constraintBottom_toTopOf="@+id/rv_cared"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_line" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cared"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_be_cared_title"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cared_title"
+        tools:listitem="@layout/item_cared" />
+
+    <TextView
+        android:id="@+id/tv_be_cared_title"
+        style="@style/authorizeTitle"
+        android:text="關注我的"
+        app:layout_constraintBottom_toTopOf="@+id/rv_be_cared"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_cared" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_be_cared"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_be_cared_title"
+        tools:listitem="@layout/item_cared" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

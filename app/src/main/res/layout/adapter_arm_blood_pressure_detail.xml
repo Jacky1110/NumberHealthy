@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/item_cl">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2022 0708" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        tools:text="手動量測" />
+
+    <TextView
+        android:id="@+id/tv_hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="心率"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_hr_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/red"
+        android:textSize="@dimen/value_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_type"
+        app:layout_constraintStart_toEndOf="@+id/tv_hr"
+        app:layout_constraintTop_toTopOf="@+id/tv_time"
+        tools:text="80" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Bpm"
+        android:textColor="@color/black"
+        android:textSize="@dimen/unit_size"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_type"
+        app:layout_constraintStart_toEndOf="@+id/tv_hr_value"
+        app:layout_constraintTop_toTopOf="@+id/tv_time" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_arm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_arm_title"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/tv_title_num"
+            style="@style/dialog_arm_title"
+            android:text="量測數值"
+            app:layout_constraintEnd_toEndOf="@+id/gl_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_l"
+            style="@style/dialog_arm_title"
+            android:text="左(L)"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right"
+            app:layout_constraintStart_toStartOf="@+id/gl_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_r"
+            style="@style/dialog_arm_title"
+            android:text="右(R)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_num" />
+
+        <TextView
+            android:id="@+id/tv_sys"
+            style="@style/dialog_arm_content"
+            android:text="收縮壓(SYS)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_num" />
+
+        <TextView
+            android:id="@+id/tv_l_sys"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/et_l_sys"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right" />
+
+        <TextView
+            android:id="@+id/et_l_sys"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sys"
+            app:layout_constraintEnd_toStartOf="@+id/tv_l_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_sys" />
+
+        <TextView
+            android:id="@+id/tv_r_sys"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/et_r_sys"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/et_r_sys"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sys"
+            app:layout_constraintEnd_toStartOf="@+id/tv_r_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="@+id/tv_sys" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sys" />
+
+        <TextView
+            android:id="@+id/tv_dia"
+            style="@style/dialog_arm_content"
+            android:text="舒張壓(DIA)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sys" />
+
+        <TextView
+            android:id="@+id/tv_l_dia"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/et_l_dia"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right" />
+
+        <TextView
+            android:id="@+id/et_l_dia"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_dia"
+            app:layout_constraintEnd_toStartOf="@+id/tv_l_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_dia" />
+
+        <TextView
+            android:id="@+id/tv_r_dia"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/et_r_dia"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/et_r_dia"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_dia"
+            app:layout_constraintEnd_toStartOf="@+id/tv_r_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="@+id/tv_dia" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dia" />
+
+        <TextView
+            android:id="@+id/tv_pp"
+            style="@style/dialog_arm_content"
+            android:text="脈壓分期(PP)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dia" />
+
+        <TextView
+            android:id="@+id/tv_l_pp"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/et_l_pp"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right" />
+
+        <TextView
+            android:id="@+id/et_l_pp"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_pp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_l_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_pp" />
+
+        <TextView
+            android:id="@+id/tv_r_pp"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/et_r_pp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/et_r_pp"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_pp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_r_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="@+id/tv_pp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pp" />
+
+        <TextView
+            android:id="@+id/tv_map"
+            style="@style/dialog_arm_content"
+            android:text="平均動脈壓\n分期(MAP)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pp" />
+
+        <TextView
+            android:id="@+id/tv_l_map"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_map"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right" />
+
+        <TextView
+            android:id="@+id/et_l_map"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_map"
+            app:layout_constraintEnd_toStartOf="@+id/tv_l_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_left"
+            app:layout_constraintTop_toTopOf="@+id/tv_map" />
+
+        <TextView
+            android:id="@+id/tv_r_map"
+            style="@style/dialog_arm_mmhg"
+            android:text="mmHg"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_map"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/et_r_map"
+            style="@style/dialog_arm_value"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_map"
+            app:layout_constraintEnd_toStartOf="@+id/tv_r_sys"
+            app:layout_constraintStart_toStartOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="@+id/tv_map" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/cl_arm"
+            app:layout_constraintEnd_toEndOf="@+id/gl_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/cl_arm"
+            app:layout_constraintEnd_toEndOf="@+id/gl_right"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

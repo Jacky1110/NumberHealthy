@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.sportFitness.SportFitnessMoreFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sport_fitness_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="標題"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/sport_fitness_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape_sport_textview"
+            android:text="序"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/measurementTime"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape_sport_textview"
+            android:text="量測時間"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/order"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <TextView
+            android:id="@+id/testItems"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape_sport_textview"
+            android:text="檢測項目"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/measurementTime"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <TextView
+            android:id="@+id/testResults"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape_sport_textview"
+            android:text="檢測結果"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/testItems"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <TextView
+            android:id="@+id/recommendedStandard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape_sport_textview"
+            android:text="建議標準"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/testResults"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fitness_more_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/recommendedStandard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

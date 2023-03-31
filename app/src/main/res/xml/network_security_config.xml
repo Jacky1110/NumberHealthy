@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<network-security-config>-->
+<!--    <base-config cleartextTrafficPermitted="true" />-->
+<!--    <domain-config>-->
+<!--        <domain includeSubdomains="true">tripspottest.jotangi.net</domain>-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="@raw/num" />-->
+<!--        </trust-anchors>-->
+<!--    </domain-config>-->
+<!--    <domain-config>-->
+<!--        <domain includeSubdomains="true">medicalec.jotangi.net</domain>-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="@raw/num2" />-->
+<!--        </trust-anchors>-->
+<!--    </domain-config>-->
+<!--</network-security-config>-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

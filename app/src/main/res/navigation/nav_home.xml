@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@+id/navigation_home">
+
+
+    <!--  ============================= 首頁設定 =================================  -->
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.jotangi.NumberHealthy.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_cFragment"
+            app:destination="@id/cFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_webFragment"
+            app:destination="@id/webFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_home_to_notification_history_fragment"
+            app:destination="@id/notification_history_fragment" />
+    </fragment>
+    <!--  ViewPager 第一頁  -->
+    <fragment
+        android:id="@+id/aFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" />
+    <!--  ViewPager 第二頁  -->
+    <fragment
+        android:id="@+id/bFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b">
+        <action
+            android:id="@+id/action_BFragment_to_WebFragment"
+            app:destination="@+id/webFragment" />
+        <action
+            android:id="@+id/action_BFragment_to_FpmFragment"
+            app:destination="@+id/fpmFragment" />
+    </fragment>
+
+
+    <!--  ============================= 子帳號項目 =================================  -->
+
+
+    <fragment
+        android:id="@+id/cFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.CFragment"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c">
+
+        <!--  心率、血壓、血氧  -->
+        <action
+            android:id="@+id/action_CFragment_to_heartRateFragment"
+            app:destination="@id/heartRateFragment" />
+        <action
+            android:id="@+id/action_CFragment_to_bloodPressureFragment"
+            app:destination="@id/bloodPressureFragment" />
+        <action
+            android:id="@+id/action_CFragment_to_bloodOxygenFragment"
+            app:destination="@id/bloodOxygenFragment" />
+
+        <!--  呼吸率、體溫、睡眠  -->
+        <action
+            android:id="@+id/action_CFragment_to_breathRateFragment"
+            app:destination="@+id/breathRateFragment" />
+        <action
+            android:id="@+id/action_CFragment_to_bodyTemperatureFragment"
+            app:destination="@+id/bodyTemperatureFragment" />
+        <action
+            android:id="@+id/action_CFragment_to_sleepFragment"
+            app:destination="@id/sleepFragment" />
+
+        <!--  步數紀錄、心電圖、卡路里  -->
+        <action
+            android:id="@+id/action_CFragment_to_stepCountFragment"
+            app:destination="@+id/stepCountFragment" />
+        <action
+            android:id="@+id/action_CFragment_to_ecgFragment"
+            app:destination="@+id/ecgFragment" />
+        <action
+            android:id="@+id/action_cFragment_to_kcalFragment"
+            app:destination="@id/kcalFragment" />
+
+        <action
+            android:id="@+id/action_cFragment_to_armBloodPressureFragment"
+            app:destination="@id/armBloodPressureFragment" />
+        <!--  黃斑部色素  -->
+        <action
+            android:id="@+id/action_cFragment_to_macularPigmentFragment"
+            app:destination="@id/macularPigmentFragment" />
+        <!--  骨質密度  -->
+        <action
+            android:id="@+id/action_cFragment_to_boneDensityFragment"
+            app:destination="@id/boneDensityFragment" />
+    </fragment>
+
+
+    <!--  心率  -->
+    <fragment
+        android:id="@+id/heartRateFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.HeartRateFragment"
+        android:label="fragment_heart_rate"
+        tools:layout="@layout/fragment_heart_rate">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_HeartRateFragment_to_HeartRateDetailFragment"
+            app:destination="@id/heartRateDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heartRateDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.HeartRateDetailFragment"
+        android:label="HRDetailFragment"
+        tools:layout="@layout/fragment_heart_rate_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_heartRateDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <!--  血壓  -->
+    <fragment
+        android:id="@+id/bloodPressureFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BloodPressureFragment"
+        android:label="fragment_blood_pressure"
+        tools:layout="@layout/fragment_blood_pressure">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_BloodPressureFragment_to_BloodPressureDetailFragment"
+            app:destination="@id/bloodPressureDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bloodPressureDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BloodPressureDetailFragment"
+        android:label="fragment_blood_pressure_detail"
+        tools:layout="@layout/fragment_blood_pressure_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bloodPressureDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <!--  血氧  -->
+    <fragment
+        android:id="@+id/bloodOxygenFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BloodOxygenFragment"
+        android:label="fragment_blood_oxygen"
+        tools:layout="@layout/fragment_blood_oxygen">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_BloodOxygenFragment_to_BloodOxygenDetailFragment"
+            app:destination="@id/bloodOxygenDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bloodOxygenDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BloodOxygenDetailFragment"
+        android:label="fragment_blood_oxygen_detail"
+        tools:layout="@layout/fragment_blood_oxygen_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bloodOxygenDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+
+    <!--  呼吸率  -->
+    <fragment
+        android:id="@+id/breathRateFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BreathRateFragment"
+        android:label="fragment_breath_rate"
+        tools:layout="@layout/fragment_breath_rate">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_BreathRateFragment_to_BreathRateDetailFragment"
+            app:destination="@id/breathRateDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breathRateDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BreathRateDetailFragment"
+        android:label="fragment_breath_rate_detail"
+        tools:layout="@layout/fragment_breath_rate_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_breathRateDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <!--  體溫  -->
+    <fragment
+        android:id="@+id/bodyTemperatureFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BodyTemperatureFragment"
+        android:label="fragment_body_temperature"
+        tools:layout="@layout/fragment_body_temperature">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_BodyTemperatureFragment_to_BodyTemperatureDetailFragment"
+            app:destination="@id/bodyTemperatureDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bodyTemperatureDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.BodyTemperatureDetailFragment"
+        android:label="fragment_body_temperature_detail"
+        tools:layout="@layout/fragment_body_temperature_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bodyTemperatureDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <!--  睡眠  -->
+    <fragment
+        android:id="@+id/sleepFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.SleepFragment"
+        android:label="fragment_sleep"
+        tools:layout="@layout/fragment_sleep">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_SleepFragment_to_SleepDetailFragment"
+            app:destination="@id/sleepDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleepDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.SleepDetailFragment"
+        android:label="fragment_sleep_detail"
+        tools:layout="@layout/fragment_sleep_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sleepDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+
+    <!--  步數紀錄  -->
+    <fragment
+        android:id="@+id/stepCountFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.StepCountFragment"
+        android:label="fragment_step_count"
+        tools:layout="@layout/fragment_step_count">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_StepCountFragment_to_StepCountDetailFragment"
+            app:destination="@+id/stepCountDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepCountDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.StepCountDetailFragment"
+        android:label="fragment_step_count_detail"
+        tools:layout="@layout/fragment_step_count_detail">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_stepCountDetailFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <!--  心電圖  -->
+    <fragment
+        android:id="@+id/ecgFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.EcgFragment"
+        android:label="fragment_ecg"
+        tools:layout="@layout/fragment_ecg">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_EcgFragment_to_EcgDetailFragment"
+            app:destination="@+id/ecgDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kcalFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.KcalFragment"
+        android:label="fragment_kcal"
+        tools:layout="@layout/fragment_kcal">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_kcalFragment_to_kcalDetailFragment"
+            app:destination="@id/kcalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kcalDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.KcalDetailFragment"
+        android:label="fragment_kcal_detail"
+        tools:layout="@layout/fragment_kcal_detail" />
+    <fragment
+        android:id="@+id/ecgDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.EcgDetailFragment"
+        android:label="fragment_ecg_detail"
+        tools:layout="@layout/fragment_ecg_detail">
+        <action
+            android:id="@+id/action_EcgDetailFragment_to_EcgSixLineFragment"
+            app:destination="@+id/ecgSixLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ecgSixLineFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.watch.EcgSixLineFragment"
+        android:label="fragment_ecg_six_line"
+        tools:layout="@layout/fragment_ecg_six_line" />
+
+
+    <!--  ============================= WebView =================================  -->
+
+
+    <!--  GoBody、健康快篩、血管硬度、體檢、EECP  -->
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.WebFragment"
+        android:label="fragment_web"
+        tools:layout="@layout/fragment_web">
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <!--  足壓量測  -->
+    <fragment
+        android:id="@+id/fpmFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.FpmFragment"
+        android:label="fragment_fpm"
+        tools:layout="@layout/fragment_fpm">
+        <action
+            android:id="@+id/action_fpmFragment_to_fpmDataListFragment"
+            app:destination="@id/fpmDataListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fpmDataListFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.FpmDataListFragment"
+        android:label="FpmDataListFragment"
+        tools:layout="@layout/fragment_fpm_data_list">
+        <action
+            android:id="@+id/action_fpmDataListFragment_to_fpmItemFragment"
+            app:destination="@id/fpmItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fpmItemFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.FpmItemFragment"
+        android:label="FpmItemFragment"
+        tools:layout="@layout/fragment_fpm_item" />
+
+
+    <!--  =============================  =================================  -->
+
+
+    <fragment
+        android:id="@+id/armBloodPressureFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.ArmBloodPressureFragment"
+        android:label="fragment_arm_blood_pressure"
+        tools:layout="@layout/fragment_arm_blood_pressure">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_armBloodPressureFragment_to_armBloodPressureDetailFragment"
+            app:destination="@id/armBloodPressureDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/armBloodPressureDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.ArmBloodPressureDetailFragment"
+        android:label="fragment_arm_blood_pressure_detail"
+        tools:layout="@layout/fragment_arm_blood_pressure_detail" />
+    <!--  黃斑部色素  -->
+    <fragment
+        android:id="@+id/macularPigmentFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.MacularPigmentFragment"
+        android:label="fragment_macular_pigment"
+        tools:layout="@layout/fragment_macular_pigment">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_macularPigmentFragment_to_macularPigmentDetailFragment"
+            app:destination="@id/macularPigmentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/macularPigmentDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.MacularPigmentDetailFragment"
+        android:label="fragment_macular_pigment_detail"
+        tools:layout="@layout/fragment_macular_pigment_detail" />
+    <!--  骨質密度  -->
+    <fragment
+        android:id="@+id/boneDensityFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.BoneDensityFragment"
+        android:label="fragment_bone_density"
+        tools:layout="@layout/fragment_bone_density">
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_boneDensityFragment_to_boneDensityInfoFragment"
+            app:destination="@id/boneDensityDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boneDensityDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.BoneDensityDetailFragment"
+        android:label="fragment_bone_density_info"
+        tools:layout="@layout/fragment_bone_density_detail" />
+
+
+    <!--  ============================= 會員 =================================  -->
+
+    <!--  登入  -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_memberFragment"
+            app:destination="@id/memberFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_LoginFragment_to_UsertermsFragment"
+            app:destination="@id/usertermsFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_ForgetpwdFragment"
+            app:destination="@id/forgetpwdFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_storeMangerFragment"
+            app:destination="@id/storeMangerFragment"
+            app:popUpTo="@id/storeMangerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <!--  註冊  -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_usertermsFragment"
+            app:destination="@id/usertermsFragment" />
+    </fragment>
+    <!--  重設密碼  -->
+    <fragment
+        android:id="@+id/forgetpwdFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.ForgetpwdFragment"
+        android:label="fragment_forgetpwd"
+        tools:layout="@layout/fragment_forgetpwd" />
+
+
+    <!--  會員中心  -->
+    <fragment
+        android:id="@+id/memberFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.MemberFragment"
+        android:label="fragment_member"
+        tools:layout="@layout/fragment_member">
+        <action
+            android:id="@+id/action_MemberFragment_to_InformationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_MemberFragment_to_WatchListFragment"
+            app:destination="@id/watchListFragment" />
+        <action
+            android:id="@+id/action_MemberFragment_to_UsertermsFragment"
+            app:destination="@id/usertermsFragment" />
+        <action
+            android:id="@+id/action_memberFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/memberFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_memberFragment_to_otherAuthorizeFragment"
+            app:destination="@id/otherAuthorizeFragment" />
+        <action
+            android:id="@+id/action_memberFragment_to_memberQrFragment"
+            app:destination="@id/memberQrFragment" />
+    </fragment>
+    <!--  會員資料  -->
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.InformationFragment"
+        android:label="InformationFragment"
+        tools:layout="@layout/fragment_information">
+        <action
+            android:id="@+id/action_informationFragment_to_memberFragment"
+            app:destination="@id/memberFragment"
+            app:popUpTo="@id/memberFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_informationFragment_to_fixPasswordFragment"
+            app:destination="@id/fixPasswordFragment" />
+    </fragment>
+    <!--  修改密碼  -->
+    <fragment
+        android:id="@+id/fixPasswordFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.FixPasswordFragment"
+        android:label="fragment_fix_password"
+        tools:layout="@layout/fragment_fix_password" />
+    <!--  授權設定  -->
+    <fragment
+        android:id="@+id/otherAuthorizeFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.OtherAuthorizeFragment"
+        android:label="fragment_other_authorize"
+        tools:layout="@layout/fragment_other_authorize" />
+    <!--  搜尋裝置  -->
+    <fragment
+        android:id="@+id/watchListFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.WatchListFragment"
+        android:label="fragment_watch_list"
+        tools:layout="@layout/fragment_watch_list">
+        <action
+            android:id="@+id/action_watchListFragment_to_watchSettingFragment"
+            app:destination="@id/watchSettingFragment"
+            app:popUpTo="@id/watchListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <!--  手錶裝置設定  -->
+    <fragment
+        android:id="@+id/watchSettingFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.WatchSettingFragment"
+        android:label="fragment_watch_setting"
+        tools:layout="@layout/fragment_watch_setting">
+        <action
+            android:id="@+id/action_watchSettingFragment_to_watchListFragment"
+            app:destination="@id/watchListFragment"
+            app:popUpTo="@id/watchSettingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_watch_info_to_nav_notification_setting"
+            app:destination="@+id/nav_notification_setting" />
+    </fragment>
+    <!--  提醒通知  -->
+    <fragment
+        android:id="@+id/nav_notification_setting"
+        android:name="com.jotangi.NumberHealthy.ui.Member.NotificationSettingFragment"
+        android:label="NotificationSetting"
+        tools:layout="@layout/fragment_notification_setting" />
+    <!--  會員使用條款  -->
+    <fragment
+        android:id="@+id/usertermsFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.UsertermsFragment"
+        android:label="fragment_userterms"
+        tools:layout="@layout/fragment_userterms" />
+
+
+    <!--  ==============================================================  -->
+
+
+    <!--  拍照請求  -->
+    <fragment
+        android:id="@+id/reservationTermsFragment"
+        android:name="com.jotangi.NumberHealthy.ui.mylittlemin.ReservationTermsFragment"
+        android:label="fragment_reservation_terms"
+        tools:layout="@layout/fragment_reservation_terms">
+        <action
+            android:id="@+id/tocamera"
+            app:destination="@id/cameraAllViewFragment" />
+        <argument
+            android:name="sid"
+            app:argType="string" />
+        <argument
+            android:name="store_name"
+            app:argType="string" />
+    </fragment>
+    <!--  拍照中  -->
+    <fragment
+        android:id="@+id/cameraAllViewFragment"
+        android:name="com.jotangi.NumberHealthy.ui.mylittlemin.CameraAllViewFragment"
+        android:label="CameraAllViewFragment"
+        tools:layout="@layout/fragment_camera_all_view">
+        <action
+            android:id="@+id/toResult"
+            app:destination="@id/imageResultFragment" />
+        <argument
+            android:name="sid"
+            app:argType="string" />
+        <argument
+            android:name="store_name"
+            app:argType="string" />
+    </fragment>
+    <!--  照片確認  -->
+    <fragment
+        android:id="@+id/imageResultFragment"
+        android:name="com.jotangi.NumberHealthy.ui.mylittlemin.ImageResultFragment"
+        android:label="ImageResultFragment"
+        tools:layout="@layout/camera_result">
+        <argument
+            android:name="sid"
+            app:argType="string" />
+        <argument
+            android:name="store_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/toRes"
+            app:destination="@id/reservationTermsFragment" />
+    </fragment>
+
+
+    <!--  ==============================================================  -->
+
+
+    <fragment
+        android:id="@+id/hospitalBookingDetailFragment"
+        android:name="com.jotangi.NumberHealthy.ui.mylittlemin.HospitalBookingDetailFragment"
+        android:label="fragment_hospital_booking_detail"
+        tools:layout="@layout/fragment_hospital_booking_detail">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="booking_no"
+            app:argType="string" />
+    </fragment>
+    <!--  拍照功能  -->
+    <fragment
+        android:id="@+id/registerIdCameraFragment"
+        android:name="com.jotangi.NumberHealthy.ui.mylittlemin.RegisterIdCameraFragment"
+        android:label="RegisterIdCameraFragment" />
+
+
+    <fragment
+        android:id="@+id/notification_history_fragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.NotificationHistoryFragment"
+        android:label="Notification_history_fragment"
+        tools:layout="@layout/fragment_notification_history">
+        <action
+            android:id="@+id/toNotifyDetail"
+            app:destination="@id/notification_history_detail_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notification_history_detail_fragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.NotificationHistoryDetailFragment"
+        android:label="Notification_history_detail_fragment"
+        tools:layout="@layout/fragment_notification_history_detail">
+        <argument
+            android:name="notification_history_vo"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/DFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.DFragment"
+        android:label="fragment_d"
+        tools:layout="@layout/fragment_d" >
+        <action
+            android:id="@+id/action_DFragment_to_sportFitnessFragment"
+            app:destination="@id/sportFitnessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fitnessMirrorCouponListFragment"
+        android:name="com.jotangi.NumberHealthy.ui.sportFitness.FitnessMirrorCouponListFragment"
+        android:label="fragment_fitness_mirror_coupon_list"
+        tools:layout="@layout/fragment_fitness_mirror_coupon_list" >
+        <action
+            android:id="@+id/action_fitnessMirrorCouponListFragment_to_commodityDetailsFragment"
+            app:destination="@id/commodityDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanCouponFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.ScanCouponFragment"
+        android:label="fragment_scan_coupon"
+        tools:layout="@layout/fragment_scan_coupon" >
+        <action
+            android:id="@+id/action_scanCouponFragment_to_storeMangerFragment"
+            app:destination="@id/storeMangerFragment"
+            app:popUpTo="@id/storeMangerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/memberQrFragment"
+        android:name="com.jotangi.NumberHealthy.ui.Member.MemberQrFragment"
+        android:label="fragment_member_qr"
+        tools:layout="@layout/fragment_member_qr" />
+    <fragment
+        android:id="@+id/commodityDetailsFragment"
+        android:name="com.jotangi.NumberHealthy.ui.sportFitness.CommodityDetailsFragment"
+        android:label="fragment_commodity_details"
+        tools:layout="@layout/fragment_commodity_details">
+        <argument
+            android:name="getCouponDataBeen"
+            app:argType="com.jotangi.NumberHealthy.api.book.GetCouponDataBeen" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicalRecordFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.HistoricalRecordFragment"
+        android:label="fragment_historical_record"
+        tools:layout="@layout/fragment_historical_record" >
+        <action
+            android:id="@+id/action_historicalRecordFragment_to_storeMangerFragment"
+            app:destination="@id/storeMangerFragment"
+            app:popUpTo="@id/storeMangerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/storeMangerFragment"
+        android:name="com.jotangi.NumberHealthy.ui.home.StoreMangerFragment"
+        android:label="fragment_store_manger"
+        tools:layout="@layout/fragment_store_manger" >
+        <action
+            android:id="@+id/action_storeMangerFragment_to_scanCouponFragment"
+            app:destination="@id/scanCouponFragment" />
+        <action
+            android:id="@+id/action_storeMangerFragment_to_historicalRecordFragment"
+            app:destination="@id/historicalRecordFragment" />
+        <action
+            android:id="@+id/action_storeMangerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sportFitnessFragment"
+        android:name="com.jotangi.NumberHealthy.ui.sportFitness.SportFitnessFragment"
+        android:label="fragment_sport_fitness"
+        tools:layout="@layout/fragment_sport_fitness" >
+        <action
+            android:id="@+id/action_sportFitnessFragment_to_fitnessMirrorCouponListFragment"
+            app:destination="@id/fitnessMirrorCouponListFragment" />
+        <action
+            android:id="@+id/action_sportFitnessFragment_to_sportFitnessMoreFragment"
+            app:destination="@id/sportFitnessMoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportFitnessMoreFragment"
+        android:name="com.jotangi.NumberHealthy.ui.sportFitness.SportFitnessMoreFragment"
+        android:label="fragment_sport_fitness_more"
+        tools:layout="@layout/fragment_sport_fitness_more" />
+</navigation>

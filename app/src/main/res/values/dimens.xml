@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_height">48dp</dimen>
+
+    <dimen name="normal_button_height">60dp</dimen>
+    <dimen name="normal_one_button_dimension_ratio">7.5</dimen>
+    <dimen name="normal_two_button_dimension_ratio">3.5</dimen>
+    <dimen name="normal_button_dimension_ratio_2_1">2</dimen>
+    <dimen name="normal_button_horizontal_margin">10dp</dimen>
+    <dimen name="normal_oval_button_radius">30dp</dimen>
+    <dimen name="watchinfo_item_height">60dp</dimen>
+    <dimen name="circle_legend_text_size">22dp</dimen>
+    <dimen name="circle_border">8dp</dimen>
+    <dimen name="circle_indicator_height">50dp</dimen>
+    <dimen name="fa_20dp">20dp</dimen>
+    <dimen name="bar_chart_height">240dp</dimen>
+    <dimen name="bt_corner">30dp</dimen>
+    <dimen name="padding_date">2dp</dimen>
+    <dimen name="v_line_height">1dp</dimen>
+    <dimen name="start_title">8dp</dimen>
+    <dimen name="unit_size">16dp</dimen>
+    <dimen name="value_size">24dp</dimen>
+    <dimen name="value_size_small">20dp</dimen>
+    <dimen name="end_unit">6dp</dimen>
+    <dimen name="chart_legend_size">16dp</dimen>
+    <dimen name="bt_padding">10dp</dimen>
+    <dimen name="legend_size">14dp</dimen>
+    <dimen name="legend_padding">10dp</dimen>
+    <dimen name="barchart_top_size">10dp</dimen>
+
+    <declare-styleable name="ChartView">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="chartType" format="enum">
+            <enum name="HISTOGRAM" value="101" />
+            <enum name="FAN" value="102" />
+        </attr>
+        <attr name="proportion" format="integer" />
+        <attr name="axisColor" format="color" />
+        <attr name="sectionColor" format="color" />
+        <attr name="sectionAmount" format="integer" />
+    </declare-styleable>
+</resources>

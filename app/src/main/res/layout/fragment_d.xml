@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.DFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_ver_left"
+        style="@style/w_h_zero"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_ver_right"
+        style="@style/w_h_zero"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_hor_top"
+        style="@style/w_h_zero"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_hor_bottom"
+        style="@style/w_h_zero"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.666" />
+
+
+    <!-- 第一排 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fitness_mirror_constraintLayout"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_top"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/fitness_mirror_view"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/fitness_mirror_textview"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/fitness_mirror_view"
+            app:layout_constraintEnd_toEndOf="@+id/fitness_mirror_view"
+            app:layout_constraintStart_toStartOf="@+id/fitness_mirror_view"
+            app:layout_constraintTop_toTopOf="@+id/fitness_mirror_view">
+
+            <ImageView
+                android:id="@+id/fitness_mirror_imageView"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/fitness_mirror_textview"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fitness_mirror_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

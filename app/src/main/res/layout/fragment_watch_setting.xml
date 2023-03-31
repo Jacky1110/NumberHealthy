@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Member.WatchSettingFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wrName"
+        style="@style/tvMemberTabIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+        android:text="UnKnown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/wrDecrip"
+        style="@style/tvMemberTabIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/wrName"
+        app:layout_constraintTop_toBottomOf="@+id/wrName" />
+
+    <com.jotangi.NumberHealthy.utils.BatteryView
+        android:id="@+id/batteryView"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wrDecrip"
+        app:layout_constraintStart_toEndOf="@+id/wrDecrip"
+        app:layout_constraintTop_toTopOf="@+id/wrDecrip" />
+
+    <TextView
+        android:id="@+id/wrBt"
+        style="@style/tvMemberTabIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/ble_connecting"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryView"
+        app:layout_constraintStart_toEndOf="@+id/batteryView"
+        app:layout_constraintTop_toTopOf="@+id/batteryView" />
+
+    <TextView
+        android:id="@+id/wrId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="FF:AB:AB:AB:AB:AB:AB:AB:AB:AB:AB"
+        app:layout_constraintStart_toStartOf="@+id/wrDecrip"
+        app:layout_constraintTop_toBottomOf="@+id/wrDecrip" />
+
+    <ImageView
+        android:id="@+id/wrToff"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_watch2"
+        app:layout_constraintBottom_toBottomOf="@+id/wrId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/btn_UnbindWatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_rounded_heartbeat"
+        android:fontFamily="sans-serif-light"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/watch_cancel"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wrId" />
+
+    <TextView
+        android:id="@+id/tv_title_warranty_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="智慧手錶保固時間:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_warranty_time"
+        app:layout_constraintStart_toStartOf="@+id/btn_UnbindWatch"
+        app:layout_constraintTop_toBottomOf="@+id/btn_UnbindWatch" />
+
+    <TextView
+        android:id="@+id/tv_warranty_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView3"
+        app:layout_constraintStart_toStartOf="@+id/btn_UnbindWatch"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_warranty_time" />
+
+    <View
+        android:id="@+id/v_line_0"
+        style="@style/viewLine"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_UnbindWatch" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/v_line_0"
+        app:layout_constraintStart_toStartOf="@+id/v_line_0"
+        app:layout_constraintTop_toBottomOf="@+id/v_line_0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hand_wear_textView"
+                style="@style/tvCommonList"
+                android:text="右手佩戴模式"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Switch
+                android:id="@+id/hand_wear_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/hand_wear_textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/v_line_1"
+                style="@style/viewLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hand_wear_textView" />
+
+            <TextView
+                android:id="@+id/tv_hour_type_title"
+                style="@style/tvCommonList"
+                android:text="時間格式"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line_1" />
+
+            <ImageView
+                android:id="@+id/iv_hour_type"
+                style="@style/ivMemberArrowIcon"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_hour_type_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_hour_type_title" />
+
+            <TextView
+                android:id="@+id/hour_type_content_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="24小時制"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_hour_type_title"
+                app:layout_constraintEnd_toStartOf="@+id/iv_hour_type"
+                app:layout_constraintTop_toTopOf="@+id/tv_hour_type_title" />
+
+            <View
+                android:id="@+id/v_line_2"
+                style="@style/viewLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hour_type_title" />
+
+            <TextView
+                android:id="@+id/tv_monitor_frequency_title"
+                style="@style/tvCommonList"
+                android:text="監測頻率"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line_2" />
+
+            <ImageView
+                android:id="@+id/iv_monitor_frequency"
+                style="@style/ivMemberArrowIcon"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_monitor_frequency_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_monitor_frequency_title" />
+
+            <TextView
+                android:id="@+id/tv_monitor_frequency_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_monitor_frequency_title"
+                app:layout_constraintEnd_toStartOf="@+id/iv_monitor_frequency"
+                app:layout_constraintTop_toTopOf="@+id/tv_monitor_frequency_title" />
+
+            <View
+                android:id="@+id/v_line_3"
+                style="@style/viewLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_monitor_frequency_title" />
+
+            <TextView
+                android:id="@+id/tv_Notify_Setting_title"
+                style="@style/tvCommonList"
+                android:text="提醒通知"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line_3" />
+
+            <ImageView
+                android:id="@+id/iv_notify"
+                style="@style/ivMemberArrowIcon"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_Notify_Setting_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_Notify_Setting_title" />
+
+            <TextView
+                android:id="@+id/tvNotificationSettingContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="通知設定"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_Notify_Setting_title"
+                app:layout_constraintEnd_toStartOf="@+id/iv_notify"
+                app:layout_constraintTop_toTopOf="@+id/tv_Notify_Setting_title" />
+
+            <View
+                android:id="@+id/v_line_4"
+                style="@style/viewLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Notify_Setting_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

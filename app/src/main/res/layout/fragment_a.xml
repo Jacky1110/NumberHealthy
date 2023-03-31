@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.AFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_ver_left"
+        style="@style/w_h_zero"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_ver_right"
+        style="@style/w_h_zero"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_hor_top"
+        style="@style/w_h_zero"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_af_c_hor_bottom"
+        style="@style/w_h_zero"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.666" />
+
+
+    <!-- 第一排 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_1"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_top"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/v_af_c_1"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_1"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_1"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_1"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_1">
+
+            <ImageView
+                android:id="@+id/iv_af_c_1"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_1"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_2"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_top"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/v_af_c_2"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_2"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_2"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_2"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_2"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_2">
+
+            <ImageView
+                android:id="@+id/iv_af_c_2"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_2"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_3"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_af_c_ver_right"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/v_af_c_3"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_3"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_3"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_3"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_3"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_3">
+
+            <ImageView
+                android:id="@+id/iv_af_c_3"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_3"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- 第二排 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_4"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_af_c_hor_top">
+
+        <View
+            android:id="@+id/v_af_c_4"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_4"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_4"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_4"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_4"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_4">
+
+            <ImageView
+                android:id="@+id/iv_af_c_4"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_4"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_5"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintTop_toTopOf="@+id/gl_af_c_hor_top">
+
+        <View
+            android:id="@+id/v_af_c_5"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_5"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_5"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_5"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_5"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_5">
+
+            <ImageView
+                android:id="@+id/iv_af_c_5"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_5"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_6"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_af_c_hor_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_af_c_ver_right"
+        app:layout_constraintTop_toTopOf="@+id/gl_af_c_hor_top">
+
+        <View
+            android:id="@+id/v_af_c_6"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_6"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_6"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_6"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_6"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_6">
+
+            <ImageView
+                android:id="@+id/iv_af_c_6"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_6"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- 第三排 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_7"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_af_c_hor_bottom">
+
+        <View
+            android:id="@+id/v_af_c_7"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_7"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_7"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_7"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_7"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_7">
+
+            <ImageView
+                android:id="@+id/iv_af_c_7"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_7"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_8"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gl_af_c_ver_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_af_c_ver_left"
+        app:layout_constraintTop_toTopOf="@+id/gl_af_c_hor_bottom">
+
+        <View
+            android:id="@+id/v_af_c_8"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_8"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_8"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_8"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_8"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_8">
+
+            <ImageView
+                android:id="@+id/iv_af_c_8"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_8"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_af_c_9"
+        style="@style/w_h_zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_af_c_ver_right"
+        app:layout_constraintTop_toTopOf="@+id/gl_af_c_hor_bottom">
+
+        <View
+            android:id="@+id/v_af_c_9"
+            style="@style/jiugongge_view"
+            app:layout_constraintBottom_toTopOf="@+id/tv_af_c_9"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/w_h_zero"
+            app:layout_constraintBottom_toBottomOf="@+id/v_af_c_9"
+            app:layout_constraintEnd_toEndOf="@+id/v_af_c_9"
+            app:layout_constraintStart_toStartOf="@+id/v_af_c_9"
+            app:layout_constraintTop_toTopOf="@+id/v_af_c_9">
+
+            <ImageView
+                android:id="@+id/iv_af_c_9"
+                style="@style/w_h_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_af_c_9"
+            style="@style/jiugongge_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_af_c_9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

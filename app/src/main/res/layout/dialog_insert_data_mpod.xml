@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tv_mpod_measure_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="量測時間："
+        app:layout_constraintBottom_toBottomOf="@+id/et_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_date" />
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_mpod_measure_time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_left_eye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左眼："
+        app:layout_constraintBottom_toBottomOf="@+id/et_left_eye"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_left_eye" />
+
+    <EditText
+        android:id="@+id/et_left_eye"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_left_eye"
+        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+    <TextView
+        android:id="@+id/tv_right_eye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右眼："
+        app:layout_constraintBottom_toBottomOf="@+id/et_right_eye"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_right_eye" />
+
+    <EditText
+        android:id="@+id/et_right_eye"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_left_eye"
+        app:layout_constraintTop_toBottomOf="@+id/et_left_eye" />
+
+    <Button
+        android:id="@+id/btn_insert_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="確認新增"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_right_eye" />
+</androidx.constraintlayout.widget.ConstraintLayout>

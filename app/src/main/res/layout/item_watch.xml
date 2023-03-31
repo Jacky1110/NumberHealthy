@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_home_reward_bg">
+
+    <ImageView
+        android:id="@+id/imgWatch"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_watch2" />
+
+    <ImageView
+        android:id="@+id/waGo"
+        style="@style/ivMemberArrowIcon"
+        android:layout_marginEnd="32dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/imgWatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/waId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="EEEEEE34567890["
+        app:layout_constraintBottom_toBottomOf="@+id/waGo"
+        app:layout_constraintEnd_toStartOf="@+id/waGo"
+        app:layout_constraintStart_toEndOf="@+id/imgWatch"
+        app:layout_constraintTop_toTopOf="@+id/waGo" />
+
+    <TextView
+        android:id="@+id/waDe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/watch_find"
+        app:layout_constraintBottom_toBottomOf="@+id/imgWatch"
+        app:layout_constraintStart_toStartOf="@+id/waId"
+        app:layout_constraintTop_toBottomOf="@+id/waId" />
+
+    <View
+        android:id="@+id/v_line_1"
+        style="@style/vMemberLine0"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgWatch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

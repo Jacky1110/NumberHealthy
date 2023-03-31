@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvPhoneTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="來電" />
+
+                <Switch
+                    android:id="@+id/switchPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvMsgTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="簡訊" />
+
+                <Switch
+                    android:id="@+id/switchMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvMailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Gmail" />
+
+                <Switch
+                    android:id="@+id/switchMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvMail" />
+
+            <LinearLayout
+                android:id="@+id/tv_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tv_calendar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="日曆" />
+
+                <Switch
+                    android:id="@+id/switch_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line3_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvMail" />
+
+            <LinearLayout
+                android:id="@+id/tvWeChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvWeChatTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="WeChat" />
+
+                <Switch
+                    android:id="@+id/switchWeChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeChat" />
+
+            <LinearLayout
+                android:id="@+id/tvQQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvQQTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="QQ" />
+
+                <Switch
+                    android:id="@+id/switchQQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvQQ" />
+
+            <LinearLayout
+                android:id="@+id/tvWeibo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvWeiboTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="微博" />
+
+                <Switch
+                    android:id="@+id/switchWeibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeibo" />
+
+            <LinearLayout
+                android:id="@+id/tvFB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvFBTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Facebook" />
+
+                <Switch
+                    android:id="@+id/switchFB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvTwitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvTwitterTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="twitter" />
+
+                <Switch
+                    android:id="@+id/switchTwitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvMessenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvMessengerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Messenger" />
+
+                <Switch
+                    android:id="@+id/switchMessenger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvWhatsAPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvWhatsAPPTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="WhatsAPP" />
+
+                <Switch
+                    android:id="@+id/switchWhatsAPP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvLinkedIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvLinkedInTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="LinkedIn" />
+
+                <Switch
+                    android:id="@+id/switchLinkedIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvInstagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvInstagramTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Instagram" />
+
+                <Switch
+                    android:id="@+id/switchInstagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvSkype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvSkypeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Skype" />
+
+                <Switch
+                    android:id="@+id/switchSkype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvLineTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Line" />
+
+                <Switch
+                    android:id="@+id/switchLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvTelegram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvTelegramTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Telegram" />
+
+                <Switch
+                    android:id="@+id/switchTelegram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line15"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvSnapchat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvSnapchatTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="Snapchat" />
+
+                <Switch
+                    android:id="@+id/switchSnapchat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line16"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+            <LinearLayout
+                android:id="@+id/tvAppNotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos2"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
+
+                <TextView
+                    android:id="@+id/tvAppNotifTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/watchinfo_item_height"
+                    android:gravity="center_vertical"
+                    android:text="App提醒" />
+
+                <Switch
+                    android:id="@+id/switchAppNotif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line17"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/gl_xpos3"
+                app:layout_constraintStart_toStartOf="@+id/gl_xpos1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

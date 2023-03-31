@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#8BC34A</color>
+    <color name="red">#F44336</color>
+    <color name="blue1">#60EDFB</color>
+    <color name="orange1">#F7E9DA</color>
+    <color name="green_point">#E6EFD9</color>
+    <color name="exchange">#E0EEF3</color>
+    <color name="sport_documental">#E4DFEB</color>
+
+    <color name="gray">#AFABAB</color>
+    <color name="gray_background">#D9D9D9</color>
+    <color name="skin_background">#EBC9AE</color>
+
+    <color name="hospital">#E0EBF6</color>
+
+    <color name="c_86888e_100">#86888e</color>
+
+    <color name="c_b21b25_100">#b21b25</color>
+    <color name="c_4b525b_100">#4b525b</color>
+    <color name="c_faf5f5_100">#faf5f5</color>
+    <color name="c_c62933_100">#c62933</color>
+    <color name="c_CC6600_100">#CC6600</color>
+    <color name="c_21b7ff_100">#21b7ff</color>
+    <color name="c_2ac3ff_100">#2ac3ff</color>
+    <color name="c_86d238_100">#86d238</color>
+    <color name="c_96da45_100">#96da45</color>
+    <color name="c_ffb800_100">#ffb800</color>
+    <color name="c_aaaaaa_100">#aaaaaa</color>
+    <color name="c_eeeeee_100">#eeeeee</color>
+    <color name="c_cecece_100">#CECECE</color>
+
+    <color name="gray_mask">#80001010</color>
+    <color name="normal_button_outline_color">#b2e6e6</color>
+    <color name="app_bar_theme">#22496B</color>
+    <color name="app_theme_heavy_blue">#353F4F</color>
+    <color name="circle_pale_green">#EBF3F1</color>
+    <color name="circle_skin">#F3E5C0</color>
+    <color name="circle_red_skin">#EED5CD</color>
+    <color name="light_blue">#0080FF</color>
+
+    <!--  主題顏色  -->
+    <color name="color_heart_rate">#FE6867</color>
+    <color name="color_heart_rate_holo">#1AFE6867</color>
+    <color name="color_blood_pressure">#FFA67A</color>
+    <color name="color_blood_pressure_holo">#1AFFA67A</color>
+    <color name="bar_blood_pressure_sbp">#FCC5AA</color>
+    <color name="bar_blood_pressure_dbp">#FFA67A</color>
+    <color name="color_blood_oxygen">#86D238</color>
+    <color name="color_blood_oxygen_holo">#1A86D238</color>
+    <color name="color_breath_rate">#FFB800</color>
+    <color name="color_body_temperature">#CC6600</color>
+    <color name="color_sleep">#8359FC</color>
+    <color name="color_sleep_holo">#1A8359FC</color>
+    <color name="color_sleep_deep">#6A50B5</color>
+    <color name="color_sleep_light">#8359FC</color>
+    <color name="color_sleep_wake">#D8D0F2</color>
+    <color name="color_step_count">#38D6FD</color>
+    <color name="color_step_count_holo">#1A38D6FD</color>
+    <color name="color_kcal">#3F51B5</color>
+    <color name="color_kcal_holo">#1A3F51B5</color>
+    <color name="color_input_data_type">#0099CC</color>
+</resources>

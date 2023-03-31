@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.watch.HeartRateFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/scrollview_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/v_title"
+                style="@style/main_view"
+                android:background="@drawable/shape_heart_rate"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/icon_circle_heart_rate_w"
+                app:layout_constraintBottom_toBottomOf="@+id/v_title"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/v_title"
+                app:layout_constraintStart_toStartOf="@+id/v_title"
+                app:layout_constraintTop_toTopOf="@+id/v_title"
+                app:layout_constraintWidth_percent="0.08" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/start_title"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/v_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_title"
+                app:layout_constraintTop_toTopOf="@+id/v_title">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/main_title_txt"
+                    android:text="@string/circle_heart_rate"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/main_title_date"
+                    android:text="-"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    style="@style/main_title_unit"
+                    android:text="@string/unit_heart_rate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_value"
+                    style="@style/main_value"
+                    android:text="-"
+                    android:textColor="@color/color_heart_rate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_unit"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.jotangi.NumberHealthy.level_bar.HeartRateLB
+                android:id="@+id/heartRateColorBar"
+                style="@style/HorizontalBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/v_title"
+                app:layout_constraintTop_toBottomOf="@+id/v_title" />
+
+            <TextView
+                android:id="@+id/tv_legend"
+                style="@style/main_legend"
+                android:background="@drawable/background_heart_rate_legend"
+                android:text="@string/legend_heart_rate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heartRateColorBar" />
+
+            <View
+                android:id="@+id/v_line"
+                style="@style/main_view_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_legend" />
+
+            <TextView
+                android:id="@+id/tv_chart_legend"
+                style="@style/main_chart_legend"
+                android:text="近7次心率測量"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bc"
+                style="@style/main_bar_chart"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_insert_data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chart_legend" />
+
+            <Button
+                android:id="@+id/btn_insert_data"
+                style="@style/main_bt"
+                android:background="@drawable/shape_round_heart_rate"
+                android:text="@string/insert_data_no_auto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

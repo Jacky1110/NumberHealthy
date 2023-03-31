@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sportFitness.SportFitnessFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:src="@drawable/img_num_land"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/sport_fitness_point_textview"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/green_point"
+        android:gravity="center"
+        android:text="您現有0點"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_picture" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <TextView
+        android:id="@+id/sport_fitness_exchange_textview"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/exchange"
+        android:gravity="center"
+        android:text="禮品兌換"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/sport_fitness_point_textview" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@color/orange1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline14">
+
+        <TextView
+            android:id="@+id/sport_fitness_physical_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/orange1"
+            android:gravity="center"
+            android:text="體適能檢測紀錄"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3" />
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_physical_texview"
+            android:gravity="center"
+            android:text="序"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sport_fitness_physical_textview" />
+
+        <TextView
+            android:id="@+id/measurementTime"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_physical_texview"
+            android:gravity="center"
+            android:text="量測時間"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/order"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <TextView
+            android:id="@+id/testItems"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_physical_texview"
+            android:gravity="center"
+            android:text="檢測項目"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/measurementTime"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <TextView
+            android:id="@+id/testResults"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_physical_texview"
+            android:gravity="center"
+            android:text="檢測結果"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/testItems"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <TextView
+            android:id="@+id/recommendedStandard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_physical_texview"
+            android:gravity="center"
+            android:text="建議標準"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/testResults"
+            app:layout_constraintTop_toTopOf="@id/order" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/physical_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/orange1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order" />
+
+        <TextView
+            android:id="@+id/physical_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange1"
+            android:gravity="end"
+            android:paddingEnd="10dp"
+            android:text="更多>>"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/physical_recyclerView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
+        android:background="@color/sport_documental"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/sport_documental_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/sport_documental"
+            android:gravity="center"
+            android:text="運動紀錄"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/documental_order"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_documental_texview"
+            android:gravity="center"
+            android:text="序"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sport_documental_title" />
+
+        <TextView
+            android:id="@+id/documental_measurementTime"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_documental_texview"
+            android:gravity="center"
+            android:text="量測時間"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/documental_order"
+            app:layout_constraintTop_toTopOf="@+id/documental_order" />
+
+        <TextView
+            android:id="@+id/documental_testItems"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_documental_texview"
+            android:gravity="center"
+            android:text="檢測項目"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/documental_measurementTime"
+            app:layout_constraintTop_toTopOf="@+id/documental_measurementTime" />
+
+        <TextView
+            android:id="@+id/documental_testResults"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_documental_texview"
+            android:gravity="center"
+            android:text="檢測結果"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/documental_testItems"
+            app:layout_constraintTop_toTopOf="@+id/documental_testItems" />
+
+        <TextView
+            android:id="@+id/documental_target"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_sport_documental_texview"
+            android:gravity="center"
+            android:text="建議標準"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/documental_testResults"
+            app:layout_constraintTop_toTopOf="@id/documental_order" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/documental_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/sport_documental"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/documental_target" />
+
+
+        <TextView
+            android:id="@+id/documental_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sport_documental"
+            android:gravity="end"
+            android:paddingEnd="10dp"
+            android:text="更多>>"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/documental_recyclerView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

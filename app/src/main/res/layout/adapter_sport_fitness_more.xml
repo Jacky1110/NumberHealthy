@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape_sport_textview"
+        android:text="1"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/measurementTime"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape_sport_textview"
+        android:text="2022/12/12 10:50:22"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/order"
+        app:layout_constraintTop_toTopOf="@id/order" />
+
+    <TextView
+        android:id="@+id/testItems"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape_sport_textview"
+        android:text="下肢肌力檢測"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/measurementTime"
+        app:layout_constraintTop_toTopOf="@id/order" />
+
+    <TextView
+        android:id="@+id/testResults"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape_sport_textview"
+        android:text="1000次"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/testItems"
+        app:layout_constraintTop_toTopOf="@id/order" />
+
+    <TextView
+        android:id="@+id/recommendedStandard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape_sport_textview"
+        android:text="11次"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/testResults"
+        app:layout_constraintTop_toTopOf="@id/order" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

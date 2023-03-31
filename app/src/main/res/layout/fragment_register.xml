@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Member.RegisterFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView57"
+                style="@style/tvCommonList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="歡迎加入會員"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView56"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="姓名"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+            <EditText
+                android:id="@+id/eName"
+                style="@style/tvCommonList"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="請輸入您的姓名"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+            <TextView
+                android:id="@+id/textView64"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Email信箱"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/eName"
+                app:layout_constraintTop_toBottomOf="@+id/eName" />
+
+            <EditText
+                android:id="@+id/eEmail"
+                style="@style/tvCommonList"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="非必填"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView64" />
+
+            <TextView
+                android:id="@+id/textView65"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="手機號碼"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/eEmail" />
+
+            <EditText
+                android:id="@+id/ePhone"
+                style="@style/tvCommonList"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="請輸入您的手機號碼做為往後的登入帳號"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView65" />
+
+            <TextView
+                android:id="@+id/textView66"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="密碼"
+                app:layout_constraintStart_toStartOf="@+id/ePhone"
+                app:layout_constraintTop_toBottomOf="@+id/ePhone" />
+
+            <EditText
+                android:id="@+id/ePwd"
+                style="@style/tvCommonList"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/member_pw_hinet"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+
+
+            <ImageView
+                android:id="@+id/iv_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_read_eye"
+                app:layout_constraintBottom_toBottomOf="@+id/ePwd"
+                app:layout_constraintEnd_toEndOf="@+id/ePwd"
+                app:layout_constraintTop_toTopOf="@+id/ePwd" />
+
+            <TextView
+                android:id="@+id/textView676"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="再次輸入密碼"
+                app:layout_constraintStart_toStartOf="@+id/ePwd"
+                app:layout_constraintTop_toBottomOf="@+id/ePwd" />
+
+            <EditText
+                android:id="@+id/again_ePwd"
+                style="@style/tvCommonList"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/member_pw_hinet"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView676"
+                app:layout_constraintTop_toBottomOf="@+id/textView676" />
+
+            <ImageView
+                android:id="@+id/iv_eye_new"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_read_eye"
+                app:layout_constraintBottom_toBottomOf="@+id/again_ePwd"
+                app:layout_constraintEnd_toEndOf="@+id/again_ePwd"
+                app:layout_constraintTop_toTopOf="@+id/again_ePwd" />
+
+            <TextView
+                android:id="@+id/textView67"
+                style="@style/tvMemberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="邀請碼"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/again_ePwd"
+                app:layout_constraintTop_toBottomOf="@+id/again_ePwd" />
+
+            <EditText
+                android:id="@+id/eInvite"
+                style="@style/tvCommonList"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="非必填"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView67" />
+
+            <RadioButton
+                android:id="@+id/eR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="我同意以此資料註冊會員，並同意"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_privacy"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eInvite" />
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="會員使用條款"
+                android:textColor="@color/red"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/eR"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/eR"
+                app:layout_constraintTop_toTopOf="@+id/eR" />
+
+            <Button
+                android:id="@+id/btRe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_edittext1"
+                android:text="註冊會員"
+                app:layout_constraintEnd_toEndOf="@+id/ePwd"
+                app:layout_constraintStart_toStartOf="@+id/ePwd"
+                app:layout_constraintTop_toBottomOf="@+id/eR" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

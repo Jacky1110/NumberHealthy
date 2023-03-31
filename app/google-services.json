@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "786602740377",
+    "project_id": "healthmanagement-f4cd1",
+    "storage_bucket": "healthmanagement-f4cd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786602740377:android:5c0f8144229bacf6100608",
+        "android_client_info": {
+          "package_name": "com.jotangi.NumberHealthy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786602740377-1o13n01pd8jp3d6g2l001a8mf9bk99h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAyCbu8XbPijeAnvuLK4B1JDWFTyO-VU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786602740377-1o13n01pd8jp3d6g2l001a8mf9bk99h5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "786602740377-ccug3lk5tgp341n2b7c9lmmh9a6eksid.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimed.healthmanagement",
+                "app_store_id": "1610454916"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

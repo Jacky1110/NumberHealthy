@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mylittlemin.RegisterIdCameraFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_v2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/view_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.camera.view.PreviewView>
+
+        <ImageButton
+            android:id="@+id/btn_capture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/ic_shutter"
+            app:layout_constraintBottom_toBottomOf="@+id/view_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/textView106"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_capture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gl_v2">
+
+            <TextView
+                android:id="@+id/textView115"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:lineSpacingExtra="8sp"
+                android:orientation="vertical"
+                android:singleLine="false"
+                android:text="請您就其中以下任一組合出示於畫面中拍攝，謝謝！ "
+                android:textColor="@color/c_faf5f5_100"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+
+                android:lineSpacingExtra="8sp"
+                android:singleLine="false"
+                android:text="（1）健保卡+居家隔離通知單 "
+                android:textColor="@color/c_faf5f5_100"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+
+                android:lineSpacingExtra="8sp"
+                android:singleLine="false"
+                android:text="（2）健保卡+陽性快篩試劑 "
+                android:textColor="@color/c_faf5f5_100"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView120"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:lineSpacingExtra="8sp"
+                android:singleLine="false"
+                android:text="（3）健保卡+陽性快篩試劑+居家隔離通知單 "
+                android:textColor="@color/c_faf5f5_100"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<paths>-->
+<!--<files-path name="shared_pdf" path="shared_pdf"/>-->
+<!--</paths>-->
+<paths >
+    <root-path name="my_images_external" path="/"/>
+    <external-path name="Download" path="/Download"/>
+    <external-path
+        name="external_storage_root"
+        path="/" />
+    <files-path
+        name="internal_storage_root"
+        path="/"/>
+    <external-cache-path
+        name="cache"
+        path="camera" />
+</paths>

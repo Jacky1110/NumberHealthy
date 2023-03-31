@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/scrollview_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/v_title"
+                style="@style/main_view"
+                android:background="@drawable/shape_sleep"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/icon_circle_sleep_w"
+                app:layout_constraintBottom_toBottomOf="@+id/v_title"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/v_title"
+                app:layout_constraintStart_toStartOf="@+id/v_title"
+                app:layout_constraintTop_toTopOf="@+id/v_title"
+                app:layout_constraintWidth_percent="0.08" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/start_title"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/v_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_title"
+                app:layout_constraintTop_toTopOf="@+id/v_title">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/main_title_txt"
+                    android:text="@string/circle_sleep"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/main_title_date"
+                    android:text="-"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_unit_minute"
+                    style="@style/main_title_unit"
+                    android:text="@string/unit_sleep_minute"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_value_minute"
+                    style="@style/main_value"
+                    android:text="-"
+                    android:textColor="@color/color_sleep"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_unit_minute"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_unit_hour"
+                    style="@style/main_title_unit"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/unit_sleep_hour"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_value_minute"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_value_hour"
+                    style="@style/main_value"
+                    android:text="-"
+                    android:textColor="@color/color_sleep"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_unit_hour"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/v_deep"
+                style="@style/sleep_legend_v"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_sleep_deep"
+                app:layout_constraintEnd_toStartOf="@+id/tv_deep"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_title" />
+
+            <TextView
+                android:id="@+id/tv_deep"
+                style="@style/legend_sleep_time"
+                android:text="深睡眠"
+                app:layout_constraintBottom_toBottomOf="@+id/v_deep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_deep"
+                app:layout_constraintTop_toTopOf="@+id/v_deep" />
+
+            <View
+                android:id="@+id/v_light"
+                style="@style/sleep_legend_v"
+                android:background="@drawable/shape_sleep_light"
+                app:layout_constraintEnd_toStartOf="@+id/tv_light"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/v_deep" />
+
+            <TextView
+                android:id="@+id/tv_light"
+                style="@style/legend_sleep_time"
+                android:text="淺睡眠"
+                app:layout_constraintBottom_toBottomOf="@+id/v_deep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_light"
+                app:layout_constraintTop_toTopOf="@+id/v_deep" />
+
+            <View
+                android:id="@+id/v_wake"
+                style="@style/sleep_legend_v"
+                android:background="@drawable/shape_sleep_wake"
+                app:layout_constraintEnd_toStartOf="@+id/tv_wake"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/v_deep" />
+
+            <TextView
+                android:id="@+id/tv_wake"
+                style="@style/legend_sleep_time"
+                android:text="清醒"
+                app:layout_constraintBottom_toBottomOf="@+id/v_deep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_wake"
+                app:layout_constraintTop_toTopOf="@+id/v_deep" />
+
+            <com.jotangi.NumberHealthy.ui.home.bar.SleepHorizontalColorBarView
+                android:id="@+id/shcbvSleep"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_deep" />
+
+            <View
+                android:id="@+id/v_line_sleep"
+                style="@style/main_view_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shcbvSleep" />
+
+            <TextView
+                android:id="@+id/tv_legend_sleep"
+                style="@style/main_chart_legend"
+                android:text="睡眠品質"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line_sleep" />
+
+            <TextView
+                android:id="@+id/tv_legend_quality"
+                style="@style/main_chart_legend"
+                android:text="分"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/v_line_sleep" />
+
+            <TextView
+                android:id="@+id/tv_value_quality"
+                style="@style/main_value_small"
+                android:text="-"
+                android:textColor="@color/color_sleep"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_legend_quality"
+                app:layout_constraintEnd_toStartOf="@+id/tv_legend_quality" />
+
+            <com.jotangi.NumberHealthy.ui.home.bar.HorizontalColorBar
+                android:id="@+id/hcbvSleep"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_legend_sleep" />
+
+            <TextView
+                android:id="@+id/tv_legend"
+                style="@style/main_legend"
+                android:background="@drawable/background_sleep_legend"
+                android:text="@string/legend_sleep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hcbvSleep" />
+
+            <View
+                android:id="@+id/v_line_quality"
+                style="@style/main_view_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_legend" />
+
+            <TextView
+                android:id="@+id/tv_chart_legend"
+                style="@style/main_chart_legend"
+                android:text="近7天睡眠分析"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line_quality" />
+
+            <TextView
+                android:id="@+id/tv_deep_legend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="深層睡眠時數"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chart_legend" />
+
+            <View
+                android:id="@+id/v_line_deep"
+                android:layout_width="16dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/color_sleep_deep"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_deep_legend"
+                app:layout_constraintEnd_toStartOf="@+id/tv_deep_legend"
+                app:layout_constraintTop_toTopOf="@+id/tv_deep_legend" />
+
+            <TextView
+                android:id="@+id/tv_total_legend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="總睡眠時數"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/v_line_deep"
+                app:layout_constraintTop_toTopOf="@+id/tv_deep_legend" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="4dp"
+                android:background="#D8D0F2"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_deep_legend"
+                app:layout_constraintEnd_toStartOf="@+id/tv_total_legend"
+                app:layout_constraintTop_toTopOf="@+id/tv_deep_legend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="時"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="-1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_legend" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lc"
+                style="@style/main_bar_chart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_legend" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
